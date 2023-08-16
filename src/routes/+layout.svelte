@@ -4,7 +4,7 @@
 
 <nav class="navbar" aria-label="main navigation">
   <div class="navbar-brand">
-    <span class="Title"><a href="/"> brunify </a><i>💁‍♀️</i></span>
+    <span class="Title"><a href="/brunify"> brunify </a><i>💁‍♀️</i></span>
   </div>
 </nav>
 <main>
