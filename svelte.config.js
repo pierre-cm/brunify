@@ -10,7 +10,7 @@ export default {
       fallback: "index.html",
     }),
     paths: {
-      base: dev ? "" : process.env.BASE_PATH,
+      base: dev ? "" : "/brunify",
     },
   },
   preprocess: [
