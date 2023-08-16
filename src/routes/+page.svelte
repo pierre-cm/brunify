@@ -1,5 +1,4 @@
 <script>
-  import Icon from "../lib/components/Icon.svelte"
   const REGEX = /[ \t]*<\!?\/?\w+[^<>]*>[ \t]*|[ \t]*<!--.*?-->[ \t]*/g
 
   let html = ""
@@ -16,9 +15,9 @@
 
 <div class="Page">
   <div class="Content">
-    <h1 class="title is-1">
+    <div class="title is-1">
       HTML code <span class="highlighted">→</span> Raw text
-    </h1>
+    </div>
     <i />
     <div>
       <span class="label highlighted">HTML code</span>
@@ -33,8 +32,10 @@
     <div class="TextArea">
       <span class="label highlighted">Result</span>
       <div>
-        <textarea class="textarea" value={result} readonly />
-        <button title="Copy" on:click={copy}><Icon name="copy" /></button>
+        <textarea class="textarea" value={result} />
+        <button class="button is-primary" title="Copy" on:click={copy}
+          >Copy</button
+        >
       </div>
     </div>
   </div>
@@ -65,22 +66,9 @@
         position: relative;
         button {
           position: absolute;
+          background-color: $primary;
           top: 3rem;
           right: 1rem;
-          border: none;
-          border-radius: 0.3rem;
-          background-color: $primary;
-          color: $white;
-          min-width: 2.5rem;
-          min-height: 2.5rem;
-          max-width: 2.5rem;
-          max-height: 2.5rem;
-          &:hover {
-            background-color: $white;
-            color: $primary;
-            border: 2px solid $primary;
-            cursor: pointer;
-          }
         }
       }
       .highlighted {
