@@ -1,0 +1,36 @@
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+
+$body-overflow-y: auto;
+
+$yellow: #f39f22;
+$orange: #f37712;
+$green: #51a800;
+$pink: #d61f84;
+$blue: #006dc7;
+$purple: #9b2cf5;
+
+$primary: $pink;
+$secondary: $purple;
+$link: $blue;
+$success: $green;
+
+$background-color: #ffffff;
+$background-color-secondary: #f0f0f0;
+$body-border-color: #c7c7c7;
+
+$grey-bis: #999999;
+$grey-light-bis: hsl(0, 0%, 80%);
+
+$text: #2e2e2e;
+$text-light: #616161;
+$text-lighter: $grey-bis;
+
+$size-1: 2em;
+$size-2: 1.6em;
+$size-3: 1.3em;
+$size-4: 1.15em;
+$size-5: 1.075em;
+$size-6: 1em;
+
+$shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow-hover: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 5px rgba(0, 0, 0, 0.23);

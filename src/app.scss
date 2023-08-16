@@ -1,0 +1,125 @@
+// @charset "utf-8";
+
+@import "variables.scss";
+
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/helpers/_all.sass";
+
+/* Fonts */
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/Raleway.ttf") format("truetype-variations");
+  font-weight: 1 999;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: $grey-lighter;
+  border-radius: 0.25rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $grey-light-bis;
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0 !important;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $danger;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 0.25rem;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.25rem;
+  width: 1.25rem;
+  left: 0.125rem;
+  top: 0.125rem;
+  background-color: white;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 0.25rem;
+}
+input:checked + .slider {
+  background-color: $success;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px $success;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.5rem);
+  -ms-transform: translateX(1.5rem);
+  transform: translateX(1.5rem);
+}
+.slider.round {
+  border-radius: 1.5rem;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Custom */
+
+.title {
+  &.is-1 {
+    font-size: $size-1;
+  }
+  &.is-2 {
+    font-size: $size-2;
+  }
+  &.is-3 {
+    font-size: $size-3;
+  }
+  &.is-4 {
+    font-size: $size-4;
+  }
+  &.is-5 {
+    font-size: $size-5;
+  }
+  &.is-6 {
+    font-size: $size-6;
+  }
+}
+
+.has-text-light {
+  color: $text-lighter !important;
+}
+.has-text-green {
+  color: $green !important;
+}
+.has-text-cyan {
+  color: $cyan !important;
+}
+
+.tag,
+pre {
+  border: 1px solid $body-border-color;
+}
