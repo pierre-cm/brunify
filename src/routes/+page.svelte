@@ -1,4 +1,6 @@
 <script>
+  import he from "he"
+
   const REGEX = /[ \t]*<\!?\/?\w+[^<>]*>[ \t]*|[ \t]*<!--.*?-->[ \t]*/g
 
   let html = ""
@@ -6,7 +8,7 @@
 
   const onInput = (e) => {
     let value = e.target.value
-    result = value.replace(REGEX, "").replace(/\n+/g, "\n").trim()
+    result = he.decode(value.replace(REGEX, "")).replace(/\n+/g, "\n").trim()
   }
   const copy = () => {
     navigator.clipboard.writeText(result)
